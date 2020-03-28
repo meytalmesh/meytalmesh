@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.DocumentsShow">
+   <children>
+      <ListView fx:id="docsView" layoutX="26.0" layoutY="96.0" prefHeight="361.0" prefWidth="499.0" />
+      <Label layoutX="116.0" layoutY="25.0" prefHeight="67.0" prefWidth="319.0" text="Relevant Documents" textFill="#41a8e8">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

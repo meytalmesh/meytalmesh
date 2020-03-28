@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="575.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller">
+    <children>
+        <TextField fx:id="corpusPathText" layoutX="167.0" layoutY="86.0" prefHeight="25.0" prefWidth="281.0" />
+        <TextField fx:id="postingPathText" layoutX="167.0" layoutY="139.0" prefHeight="25.0" prefWidth="281.0" />
+        <Text fill="#33b3f8" layoutX="194.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Engine">
+            <font>
+                <Font name="Calibri Bold" size="43.0" />
+            </font>
+        </Text>
+        <Button fx:id="corpusPath_btn" layoutX="468.0" layoutY="86.0" mnemonicParsing="false" onAction="#insertCorpusPath" prefHeight="25.0" prefWidth="122.0" text="Browse Corpus Path">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="postingPath_btn" layoutX="468.0" layoutY="138.0" mnemonicParsing="false" onAction="#insertPostingPath" prefHeight="25.0" prefWidth="122.0" text="Browse Posting Path">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </Button>
+        <CheckBox fx:id="stemming_btn" layoutX="435.0" layoutY="174.0" mnemonicParsing="false" text="With Stemming" />
+        <Button fx:id="reset_btn" layoutX="149.0" layoutY="204.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="69.0" text="reset" />
+        <Button fx:id="showDictionary_btn" layoutX="122.0" layoutY="262.0" mnemonicParsing="false" onAction="#showDic" prefHeight="36.0" prefWidth="171.0" text="Show Dictionary">
+            <font>
+                <Font name="Calibri" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="loadDictionary_btn" layoutX="342.0" layoutY="262.0" mnemonicParsing="false" onAction="#loadDic" prefHeight="36.0" prefWidth="171.0" text="Load Dictionary">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="start_btn" layoutX="435.0" layoutY="199.0" mnemonicParsing="false" onAction="#start" prefHeight="17.0" prefWidth="122.0" text="Start">
+            <font>
+                <Font name="Calibri Bold" size="26.0" />
+            </font>
+        </Button>
+      <Button fx:id="run_btn" layoutX="435.0" layoutY="422.0" mnemonicParsing="false" onAction="#run" prefHeight="49.0" prefWidth="122.0" text="Run">
+         <font>
+            <Font name="Calibri Bold" size="26.0" />
+         </font>
+      </Button>
+      <TextField fx:id="queryText" layoutX="167.0" layoutY="324.0" prefHeight="25.0" prefWidth="281.0" />
+      <TextField fx:id="queryPathText" layoutX="167.0" layoutY="373.0" prefHeight="25.0" prefWidth="281.0" />
+      <Button fx:id="queryPath_btn" layoutX="468.0" layoutY="373.0" mnemonicParsing="false" onAction="#insertQueryPath" prefHeight="25.0" prefWidth="122.0" text="Browse Query Path">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="semantic_btn" layoutX="468.0" layoutY="321.0" mnemonicParsing="false" text="With Semantic" onAction="#chooseSemantic" />
+      <Text layoutX="39.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter corpus path:" wrappingWidth="122.00000494718552">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="36.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter posting path:" wrappingWidth="122.00000494718552">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write query:" wrappingWidth="88.66666144132614">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter query path:" wrappingWidth="122.00000494718552">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="showEntities_btn" layoutX="201.0" layoutY="428.0" mnemonicParsing="false" onAction="#showEntites" prefHeight="36.0" prefWidth="122.0" text="Show Entities">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="resultPathText" layoutX="207.0" layoutY="494.0" prefHeight="25.0" prefWidth="281.0" />
+      <Text layoutX="19.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter path to save the result:" wrappingWidth="197.3333484530449">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="docs_box" layoutX="25.0" layoutY="428.0" prefHeight="36.0" prefWidth="150.0" />
+      <Line endX="389.0" endY="1.52587890625E-5" fill="#6b81ee" layoutX="234.0" layoutY="309.0" startX="-220.3333282470703" startY="1.52587890625E-5" stroke="#33b3f8" strokeLineCap="ROUND" strokeType="OUTSIDE" />
+      <Button fx:id="resultPath_btn" layoutX="505.0" layoutY="494.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Browse Result Path" onAction="#insertResultPath">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="save_btn" layoutX="505.0" layoutY="532.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="save" onAction="#saveing">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <CheckBox fx:id="onLine_btn" layoutX="468.0" layoutY="347.0" mnemonicParsing="false" text="online" />
+    </children>
+</AnchorPane>
